@@ -142,7 +142,7 @@ Update `DEFAULT_THEME_VERSION` in `src/core/server/ui_settings/ui_settings_confi
 2. Update OSD to consume new OUI version
 3. Make the following changes in OSD:
     1. Load your theme by creating sass files in `src/core/public/core_app/styles`
-    2. Update [webpack config](packages/osd-ui-shared-deps/webpack.config.js) to create css files for your theme
+    2. Update [webpack config](/packages/osd-ui-shared-deps/webpack.config.js) to create css files for your theme
     2. Add kui css files:
         1. Create kui sass files for your theme in `packages/osd-ui-framework/src/`
         2. Update `packages/osd-ui-framework/Gruntfile.js` to build these files
@@ -155,8 +155,8 @@ Update `DEFAULT_THEME_VERSION` in `src/core/server/ui_settings/ui_settings_confi
         1. Add version and label for version to `THEME_VERSION_LABEL_MAP`
         2. Update `kuiCssDistFilenames` map for new theme
         3. Update `ThemeTag` type in corresponding definition file (`theme_config.d.ts`)
-    5. Load variables for new theme in `packages/osd-ui-shared-deps/theme.ts'`
-    6. Update `src/legacy/ui/ui_render/ui_render_mixin.js':
+    5. Load variables for new theme in `packages/osd-ui-shared-deps/theme.ts`
+    6. Update `src/legacy/ui/ui_render/ui_render_mixin.js`:
         1. Load variables for your theme in `THEME_SOURCES`
         2. Define the text font for your theme in `fontText`
         3. Define the code font for your theme in `fontCode`
