@@ -61,6 +61,8 @@ My custom OUI theme is inspired by [Arancia](https://arancia.ca/) and introduces
 
 To use this theme you need to go to the Sidebar and under Management, **Dashboard Management > Advanced Settings > Appearance > Theme version**. You can also enable the header menu item to quickly switch between themes.
 
+<img width="1207" height="628" alt="image" src="https://github.com/user-attachments/assets/3869c709-cdb2-49d3-ba46-d64445b7b9db" />
+
 # New components
 
 While exploring OpenSearch Dashboards, I noticced that it does not currently include a dedicated client or user area. To explore how such a feature could be integrated, I created several custom components to demonstrate how a user area could appear in the dashboard header. These components illustrate potential interactions with notifications and user profile management in a clean and cohesive interface.
