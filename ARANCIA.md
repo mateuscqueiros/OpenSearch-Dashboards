@@ -10,7 +10,7 @@ This repository contains the Open Search Dashboards integrated with a custom OUI
 
 # How to run this project
 
-For the next steps you’ll need to use `nvm` and the correct node version for each project (although I have observed that `oui` could use the latest version):
+For the next steps you’ll need to use `nvm` and the correct node version for each project (although I have observed that `oui` could use the latest version). For reference on when to use nvm see their documentation: [OUI Developer Guide](https://github.com/opensearch-project/oui/blob/main/DEVELOPER_GUIDE.md) and [Open Search Dashboard Developer Guide](https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/DEVELOPER_GUIDE.md#install-node)
 
 You’ll need to clone this repository and the oui repository, preferrably in the same directory:
 
@@ -34,8 +34,9 @@ pwd
 cd ../OpenSearch-Dashboards
 
 # Reference your local project
-find . -type f -name package.json -exec sed -i 's#\"@elastic/eui\": \".*\"#\"@elastic/eui\": \"file:/c/Users/Usuario/Documents/.work/personal/oui\"#g' {} \;
+find . -type f -name package.json -exec sed -i 's#\"@elastic/eui\": \".*\"#\"@elastic/eui\": \"file:OUI_PATH\"#g' {} \;
 
+# You might need to use nvm to switch versions here
 yarn osd clean
 yarn osd bootstrap
 ```
@@ -43,6 +44,8 @@ yarn osd bootstrap
 Run the project using two process:
 
 ```bash
+# You could be prompted to switch versions using nvm here
+
 # Terminal 1: start the server locally
 yarn opensearch snapshot
 
@@ -50,7 +53,7 @@ yarn opensearch snapshot
 yarn start
 ```
 
-After that you’ll need to wait about 5 minutes for everything to get started. Even when the dashboards are ready you may need to wait a little longer before accessing the project to allow the server to load all the plugins. If you get an error when opening, you may need to wait longer or restart the dashboards service.
+After that you’ll need to wait about 5 minutes for everything to get started. Even when the dashboards are ready (on port 5603) you may need to wait a little longer before accessing the project to allow the server to load all the plugins. If you get an error when opening, you may need to wait longer or restart the dashboards service.
 
 # Arancia theme
 
