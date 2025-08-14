@@ -53,7 +53,7 @@ yarn opensearch snapshot
 yarn start
 ```
 
-After that you’ll need to wait about 5 minutes for everything to get started. Even when the dashboards are ready (on port 5603) you may need to wait a little longer before accessing the project to allow the server to load all the plugins. If you get an error when opening, you may need to wait longer or restart the dashboards service.
+After that you may need to wait a while before accessing, as specified [here](https://github.com/opensearch-project/OpenSearch-Dashboards/blob/main/DEVELOPER_GUIDE.md#run-opensearch-dashboards).
 
 # Arancia theme
 
